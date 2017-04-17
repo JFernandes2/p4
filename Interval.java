@@ -18,10 +18,10 @@
 public class Interval<T extends Comparable<T>> implements IntervalADT<T> {
 
     // TODO declare any needed data members
-	T key;
-	T start;
-	T end;
-	String label;
+	private T key;
+	private T start;
+	private T end;
+	private String label;
 
 	/**
 	 * Interval class 
