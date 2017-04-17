@@ -31,7 +31,9 @@ public class IntervalNode<T extends Comparable<T>> {
 	 *            the interval data member.
 	 */
 	public IntervalNode(IntervalADT<T> interval) {
-		// TODO
+		this.interval = interval;
+		this.maxEnd = interval.getEnd();
+		
 	}
 
 	/**
@@ -41,8 +43,11 @@ public class IntervalNode<T extends Comparable<T>> {
 	 * @return in-order successor node
 	 */
 	public IntervalNode<T> getSuccessor() {
-		// TODO
-	}
+		if (rightNode == null) 
+			return null;
+		return rightNode.getLeftNode();
+		}
+		
 
 	/**
 	 * Returns the interval associated with the node.
